@@ -51,6 +51,8 @@ repositories {
     maven("https://repo.bg-software.com/repository/api/")
     // ZNPCsPlus
     maven("https://repo.pyr.lol/snapshots")
+    // CustomFishing
+    maven("https://repo.momirealms.net/releases/")
 
     // bungeecord-chat, HikariCP, hppc, JetBrains Annotations, slf4j
     mavenCentral()
@@ -75,7 +77,7 @@ dependencies {
     // CoreProtect
     compileOnlyPlugin("net.coreprotect:coreprotect:21.2")
     // CustomFishing
-    compileOnlyPlugin("com.github.Xiao-MoMi:Custom-Fishing:2.2.20")
+    compileOnlyPlugin("net.momirealms:custom-fishing:2.3.7")
     // EcoBosses, EcoMobs
     compileOnlyPlugin("com.willfp:EcoBosses:9.14.0")
     compileOnlyPlugin("com.willfp:EcoMobs:10.0.0-b1")

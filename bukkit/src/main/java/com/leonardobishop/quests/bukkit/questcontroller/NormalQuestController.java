@@ -107,6 +107,16 @@ public class NormalQuestController implements QuestController {
                 Messages.send(preStartQuestEvent.getQuestResultMessage(), player);
             }
         }
+        if (code == QuestStartResult.QUEST_ALREADY_STARTED && quest.categoryid == "tutorial") {
+            for (String s : quest.getStartCommands()) {
+                s = s.replace("{player}", player.getName());
+                if (plugin.getConfig().getBoolean("options.quests-use-placeholderapi")) {
+                    Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), plugin.getPlaceholderAPIProcessor().apply(player, s));
+                } else {
+                    Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), s);
+                }
+            }
+        }
         if (code == QuestStartResult.QUEST_SUCCESS) {
             QuestProgress questProgress = qPlayer.getQuestProgressFile().getQuestProgress(quest);
             questProgress.setStarted(true);

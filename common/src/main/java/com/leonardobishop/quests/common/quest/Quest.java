@@ -38,7 +38,7 @@ public class Quest implements Comparable<Quest> {
     private boolean countsTowardsLimit;
     private Map<String, String> placeholders;
     private Map<String, String> progressPlaceholders;
-    private String categoryid;
+    public String categoryid;
 
     private Quest() { }
 

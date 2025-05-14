@@ -126,7 +126,7 @@ dependencies {
     // ZNPCsPlus
     compileOnlyPlugin("lol.pyr:znpcsplus-api:2.0.0-SNAPSHOT")
 
-    // IridiumSkyblock, PyroFishingPro, uSkyBlock
+    // IridiumSkyblock, PyroFishingPro, uSkyBlock, RivalHarvesterHoes
     compileOnlyLibs("libs", listOf("*.jar"))
 
     // bStats
